@@ -15,7 +15,7 @@ const extension: JupyterFrontEndPlugin<void> = {
   activate: (app: JupyterFrontEnd, palette: ICommandPalette) => {
     const { commands } = app;
 
-    let command = 'tutorial:command-palette';
+    const command = 'tutorial:command-palette';
 
     // Add a command
     commands.addCommand(command, {
@@ -29,7 +29,7 @@ const extension: JupyterFrontEndPlugin<void> = {
     });
 
     // Add the command to the command palette
-    let category = 'Tutorial';
+    const category = 'Tutorial';
     palette.addItem({ command, category, args: { origin: 'from palette' } });
   }
 };

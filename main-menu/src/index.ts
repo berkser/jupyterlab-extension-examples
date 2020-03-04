@@ -24,7 +24,7 @@ const extension: JupyterFrontEndPlugin<void> = {
     const { commands } = app;
 
     // Add a command
-    let command = 'tutorial:main-menu';
+    const command = 'tutorial:main-menu';
     commands.addCommand(command, {
       label: 'Call tutorial:main-menu',
       caption: 'Execute tutorial:main-menu',
@@ -34,7 +34,7 @@ const extension: JupyterFrontEndPlugin<void> = {
     });
 
     // Add the command to the command palette
-    let category = 'Tutorial';
+    const category = 'Tutorial';
     palette.addItem({
       command,
       category,
@@ -42,7 +42,7 @@ const extension: JupyterFrontEndPlugin<void> = {
     });
 
     // Create a menu
-    let tutorialMenu: Menu = new Menu({ commands });
+    const tutorialMenu: Menu = new Menu({ commands });
     tutorialMenu.title.label = 'Tutorial';
     mainMenu.addMenu(tutorialMenu, { rank: 80 });
 

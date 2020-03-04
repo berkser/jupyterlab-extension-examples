@@ -12,7 +12,7 @@ const extension: JupyterFrontEndPlugin<void> = {
   activate: (app: JupyterFrontEnd) => {
     const { commands } = app;
 
-    let command = 'tutorial:command';
+    const command = 'tutorial:command';
 
     // Add a command
     commands.addCommand(command, {
